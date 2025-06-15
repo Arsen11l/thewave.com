@@ -1,0 +1,265 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif; /* Единый шрифт для всего body */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px; /* Базовый размер шрифта для всего сайта, немного увеличен */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px; /* Отступы кнопки */
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px; /* Размер шрифта кнопки, немного больше */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+/* Header */
+.header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 26px; /* Немного увеличен */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 19px; /* Немного увеличен */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+/* Hero Section (Home Page) */
+.hero-section {
+    position: relative;
+    height: 400px;
+    background-image: url('images/wave_logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    flex-grow: 1;
+}
+
+.hero-content {
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4.2em; /* Немного увеличен */
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.6em; /* Немного увеличен */
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 100px;
+    flex-grow: 1;
+}
+
+.about-section h2 {
+    font-size: 3.2em; /* Немного увеличен */
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.about-section p {
+    font-size: 1.3em; /* Немного увеличен */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.about-social-links h3 {
+    font-size: 1.9em; /* Немного увеличен */
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.about-social-links .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Catalog Section */
+.catalog-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.catalog-section h2 {
+    font-size: 3.2em; /* Немного увеличен */
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center; /* Центрируем весь текст внутри карточки */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует элементы по горизонтали внутри flex-контейнера */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.7em; /* Немного увеличен */
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    text-align: center; /* Убедимся, что заголовок центрирован */
+}
+
+.product-card .price {
+    font-size: 1.4em; /* Немного увеличен */
+    font-weight: bold;
+    color: #ff6600;
+    margin-bottom: 10px;
+    text-align: center; /* Убедимся, что цена центрирована */
+}
+
+.product-card p {
+    font-size: 1.05em; /* Немного увеличен, чтобы был ближе к базовому */
+    margin-bottom: 5px;
+    text-align: center; /* Убедимся, что абзацы центрированы */
+}
+
+.product-card .delivery {
+    font-size: 0.95em; /* Немного увеличен */
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center; /* Убедимся, что текст доставки центрирован */
+}
+
+.product-card .btn {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 15px; /* Размер шрифта кнопки, сделан чуть больше */
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px; /* Увеличим максимальную ширину для соответствия новому размеру шрифта */
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em; /* Немного увеличен */
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 5px 0;
+}
